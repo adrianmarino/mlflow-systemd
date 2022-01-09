@@ -19,8 +19,9 @@ $ mysql -u root -e "CREATE DATABASE IF NOT EXISTS mlflow"
 
 ```bash
 $ cd ~
-$ git clone https://github.com/adrianmarino/optuna-dashboard.git
-$ cd optuna-dashboard
+$ git clone https://github.com/adrianmarino/mlflow-systemd.git
+$ mv mlflow-systemd mlflow
+$ cd mlflow
 ```
 
 **Step 2**: Create conda environment required to run mlflow.
