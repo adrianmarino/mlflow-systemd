@@ -1,0 +1,13 @@
+[Unit]
+Description=MLflow server for user %u
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=%h/mlflow
+ExecStart=%h/mlflow/bin/start
+ExecStop=%h/mlflow/bin/stop
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target

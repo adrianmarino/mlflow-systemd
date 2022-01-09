@@ -1,0 +1,10 @@
+name: mlflow
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - mysqlclient
+  - mlflow
+  - boto3
+  - pip
+  - pip:

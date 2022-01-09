@@ -1,0 +1,19 @@
+#!/bin/zsh
+# -----------------------------------------------------------------------------
+# Main
+# -----------------------------------------------------------------------------
+ln -s /run/mysqld/mysqld.sock /tmp/mysql.sock
+
+ABSPATH=$(readlink -f $0)
+ABSDIR=$(dirname $ABSPATH)
+
+source "$ABSDIR/../config.conf"
+source "$CONDA_PATH/etc/profile.d/conda.sh"
+
+echo "ENV: $ENV"
+conda activate $ENV
+
+echo "Start server..."
+/usr/bin/nohup mlflow server --backend-store-uri $DB_URL --default-artifact-root $FILES_PATH --host $HOST --port $PORT &
+# -----------------------------------------------------------------------------
+
