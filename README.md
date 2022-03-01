@@ -2,18 +2,18 @@
 
 Install mlflow as systemd daemon under linux. This run with your regular linux user.
 
-# Requirements
+## Requirements
 
 * miniconda
 * mariadb/mysql
 
-# Setup database
+## Setup database
 
 ```bash
 $ mysql -u root -e "CREATE DATABASE IF NOT EXISTS mlflow"
 ```
 
-# Setup mlflow
+## Setup mlflow
 
 **Step 1**: Clone repo. 
 
